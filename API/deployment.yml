@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ehpad-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ehpad
+  template:
+    metadata:
+      labels:
+        app: ehpad
+    spec:
+      containers:
+      - name: ehpad-container
+        image: aissaoui33/ehpad:tag
+        ports:
+        - containerPort: 5000
