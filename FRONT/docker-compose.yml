@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ehpad:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - REACT_APP_API_URL=172.20.10.11
+    ports:
+      - 3000:3000
+    command: npm run start

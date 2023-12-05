@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ehpad:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    command: npm run start
